@@ -213,7 +213,17 @@ for pl in combined_places:
         except Exception:
             pass
 
-    pl["zh"] = pl.get("offset_str") or (pl.get("TZ") and datetime.now(pytz.timezone(pl["TZ"])).strftime("%z")).replace("", ":00")
+    if not pl.get("offset_str") and pl.get("TZ"):
+        try:
+            offset = datetime.now(pytz.timezone(pl["TZ"])).utcoffset()
+            hours = int(offset.total_seconds() // 3600)
+            minutes = int((abs(offset.total_seconds()) % 3600) // 60)
+            pl["zh"] = f"{hours:+03d}:{minutes:02d}"
+        except Exception:
+            pl["zh"] = None
+    else:
+        pl["zh"] = pl.get("offset_str")
+
     if "." in gmt_key:
         continue  # Saltar GMT+5.5, GMT-3.5, etc.
     if gmt_key not in result:
