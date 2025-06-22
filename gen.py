@@ -109,15 +109,30 @@ timezone_map = {
     "🇺🇸 (Howland)": "Pacific/Howland"  # Zona horaria correcta para Howland
 }
 
-# Agrupar lugares por GMT actual
+# Agrupar lugares por GMT actual con hora local completa
 grouped_by_gmt = {}
 for place in places:
     location = place["Lugar"]
     timezone = timezone_map.get(location, None)
     gmt = get_gmt_offset(timezone, location) if timezone else "GMT Unknown"
+
+    # Obtener hora local completa
+    fecha_hora_local = "Desconocida"
+    if timezone:
+        now = datetime.now(pytz.timezone(timezone))
+        fecha_hora_local = now.strftime("%Y-%m-%d %H:%M")
+
+    # Armar entrada enriquecida
+    place_with_time = {
+        "Lugar": place["Lugar"],
+        "CC": place["CC"],
+        "FechaHoraLocal": fecha_hora_local
+    }
+
+    # Agrupar por GMT
     if gmt not in grouped_by_gmt:
         grouped_by_gmt[gmt] = []
-    grouped_by_gmt[gmt].append(place)
+    grouped_by_gmt[gmt].append(place_with_time)
 
 # Definir la carpeta temporal
 temp_folder = "temp"
