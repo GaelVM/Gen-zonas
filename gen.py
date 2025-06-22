@@ -242,7 +242,16 @@ if skipped:
 TEMP_DIR = "temp"
 os.makedirs(TEMP_DIR, exist_ok=True)
 OUT_FILE = os.path.join(TEMP_DIR, "datalugares.json")
+# Ordenar GMTs de mayor a menor (+14 a -11)
+def _gmt_sort_key(k):
+    try:
+        return -int(k.replace("GMT", ""))  # GMT+14 → -14 (mayor primero)
+    except:
+        return 999
+
+ordered = {k: result[k] for k in sorted(result.keys(), key=_gmt_sort_key)}
+
 with open(OUT_FILE, "w", encoding="utf-8") as f:
-    json.dump(result, f, ensure_ascii=False, indent=2)
+    json.dump(ordered, f, ensure_ascii=False, indent=2)
 
 print(f"✅ Datos agrupados por GMT guardados en {OUT_FILE}")
