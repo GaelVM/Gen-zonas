@@ -213,7 +213,12 @@ for pl in combined_places:
         except Exception:
             pass
 
-    result.setdefault(gmt_key, []).append(pl)
+    pl["zh"] = pl.get("offset_str") or (pl.get("TZ") and datetime.now(pytz.timezone(pl["TZ"])).strftime("%z")).replace("", ":00")
+    if "." in gmt_key:
+        continue  # Saltar GMT+5.5, GMT-3.5, etc.
+    if gmt_key not in result:
+        result[gmt_key] = {"zh": pl["zh"], "lugares": []}
+    result[gmt_key]["lugares"].append(pl)
 
 # Mostrar advertencia si hubo lugares ignorados
 if skipped:
