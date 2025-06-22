@@ -190,9 +190,13 @@ if os.path.exists("datalugares_completo.json"):
 
 # ------------------------------------------------------------------
 # 5) Agrupar por GMT actual
+skipped = []  # Para registrar lugares sin TZ ni offset
 # ------------------------------------------------------------------
 result = {}  # type: dict[str, list[dict]]
 for pl in combined_places:
+    if not pl.get("TZ") and not pl.get("offset_str"):
+        skipped.append(pl)
+        continue
     gmt_key = "GMT Unknown"
 
     # A) si tiene TZ computamos con pytz
@@ -210,6 +214,12 @@ for pl in combined_places:
             pass
 
     result.setdefault(gmt_key, []).append(pl)
+
+# Mostrar advertencia si hubo lugares ignorados
+if skipped:
+    print(f"⚠️  Se ignoraron {len(skipped)} lugares sin TZ ni offset definido.")
+    for s in skipped:
+        print(" -", s.get("Lugar", "?"))
 
 # ------------------------------------------------------------------
 # 6) Guardar archivo final
