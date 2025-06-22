@@ -135,7 +135,7 @@ def _offset_str_to_hours(offset: str) -> float:
 # ------------------------------------------------------------------
 # 4) Construir lista unificada (manual + JSON masivo)
 # ------------------------------------------------------------------
-combined_places: list[dict] = []
+combined_places = []  # type: list[dict]
 
 # A) manual con su TZ
 for p in places_manual:
@@ -191,7 +191,7 @@ if os.path.exists("datalugares_completo.json"):
 # ------------------------------------------------------------------
 # 5) Agrupar por GMT actual
 # ------------------------------------------------------------------
-result: dict[str, list[dict]] = {}
+result = {}  # type: dict[str, list[dict]]
 for pl in combined_places:
     gmt_key = "GMT Unknown"
 
