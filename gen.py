@@ -4,19 +4,8 @@ from datetime import datetime
 import pytz
 
 """
-Script único: agrupa todos los lugares (manuales y del JSON masivo) por su GMT **dinámico**
--------------------------------------------------------------------------------
-• Mantiene la lista manual de lugares y el `timezone_map` original.
-• Carga `datalugares_completo.json` si existe y aplanará:
-    - Sección `estructurado` → recorre continente → zona → países → lugares.
-    - Lista plana con claves `Lugar`, `CC`, `TZ`.
-• Cada entrada debe tener **o** una zona horaria (`TZ`) **o** un string de offset (`+05:30`, `-02:00`, etc.).
-• Genera **un único** `temp/datalugares.json` con la forma:
-    {
-        "GMT+1": [ {"Lugar": "...", "CC": "...", "TZ": "..."}, ... ],
-        "GMT-5": [ ... ],
-        ...
-    }
+ya que estas aqui, invitame una chela  ...
+    
 """
 
 # ------------------------------------------------------------------
