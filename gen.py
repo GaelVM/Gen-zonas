@@ -1,14 +1,10 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-
 import os
 from datetime import datetime, timedelta
 import pytz
 import json
+from typing import Dict, List
 
-# ──────────────────────────────────────────────
-# 1. Lista de lugares (sin cambios)
-# ──────────────────────────────────────────────
+# Lista de lugares
 places = [
     {"Lugar": "🇬🇧 (London)", "CC": "51.5012,-0.1397"},
     {"Lugar": "🇮🇨 (Las Palmas)", "CC": "28.1287,-15.4516"},
@@ -54,9 +50,7 @@ places = [
     {"Lugar": "🇺🇸 (Howland)", "CC": "0.8072,-176.6177"}
 ]
 
-# ──────────────────────────────────────────────
-# 2. Mapeo Lugar → zona horaria de pytz
-# ──────────────────────────────────────────────
+# Mapa de zonas horarias
 timezone_map = {
     "🇬🇧 (London)": "Europe/London",
     "🇮🇨 (Las Palmas)": "Atlantic/Canary",
@@ -99,30 +93,24 @@ timezone_map = {
     "🇺🇸 (Downtown Anchorage)": "America/Anchorage",
     "🇺🇸 (Honolulu)": "Pacific/Honolulu",
     "🇦🇸 (Pago Pago)": "Pacific/Pago_Pago",
-    # Howland no existe en pytz ⇒ lo tratamos aparte
-    "🇺🇸 (Howland)": None
+    "🇺🇸 (Howland)": None  # Zona inexistente en pytz
 }
 
-# ──────────────────────────────────────────────
-# 3. Helpers
-# ──────────────────────────────────────────────
-def calc_gmt_offset(tz_name: str, lugar: str) -> str:
-    """Devuelve la cadena 'GMT±X'."""
-    # Caso especial Howland (GMT-12)
+# Función para obtener GMT
+def calc_gmt_offset(tz_name, lugar):
     if lugar == "🇺🇸 (Howland)":
         return "GMT-12"
     try:
         tz = pytz.timezone(tz_name)
         now = datetime.now(tz)
-        offset = now.utcoffset()            # timedelta
+        offset = now.utcoffset()
         hours = int(offset.total_seconds() // 3600)
         return f"GMT{hours:+d}"
-    except Exception:
+    except:
         return "GMT Unknown"
 
-def local_datetime_str(lugar: str, tz_name: str) -> str:
-    """Devuelve fecha+hora local 'YYYY-MM-DD HH:MM' o 'Desconocida'."""
-    # Howland: UTC-12 → UTC ahora menos 12 h
+# Función para obtener fecha y hora local
+def local_datetime_str(lugar, tz_name):
     if lugar == "🇺🇸 (Howland)":
         now = datetime.utcnow() - timedelta(hours=12)
         return now.strftime("%Y-%m-%d %H:%M")
@@ -130,13 +118,11 @@ def local_datetime_str(lugar: str, tz_name: str) -> str:
         tz = pytz.timezone(tz_name)
         now = datetime.now(tz)
         return now.strftime("%Y-%m-%d %H:%M")
-    except Exception:
+    except:
         return "Desconocida"
 
-# ──────────────────────────────────────────────
-# 4. Agrupar por GMT, añadiendo FechaHoraLocal
-# ──────────────────────────────────────────────
-grouped_by_gmt: dict[str, list[dict]] = {}
+# Agrupar por GMT
+grouped_by_gmt: Dict[str, List[dict]] = {}
 
 for place in places:
     lugar = place["Lugar"]
@@ -152,14 +138,12 @@ for place in places:
 
     grouped_by_gmt.setdefault(gmt, []).append(entry)
 
-# ──────────────────────────────────────────────
-# 5. Guardar a JSON en carpeta 'temp'
-# ──────────────────────────────────────────────
+# Guardar archivo JSON
 temp_folder = "temp"
 os.makedirs(temp_folder, exist_ok=True)
 json_file_path = os.path.join(temp_folder, "datalugares.json")
 
-with open(json_file_path, "w", encoding="utf-8") as fp:
-    json.dump(grouped_by_gmt, fp, ensure_ascii=False, indent=2)
+with open(json_file_path, "w", encoding="utf-8") as json_file:
+    json.dump(grouped_by_gmt, json_file, ensure_ascii=False, indent=2)
 
 print(f"✅ Datos guardados en: {json_file_path}")
