@@ -1,0 +1,414 @@
+{
+  "GMT+14": {
+    "zh": "+14:00",
+    "lugares": [
+      {
+        "Lugar": "🇰🇮 (London)",
+        "CC": "1.9871,-157.4771",
+        "TZ": "Pacific/Kiritimati",
+        "src": "manual",
+        "zh": "+14:00"
+      }
+    ]
+  },
+  "GMT+13": {
+    "zh": "+13:00",
+    "lugares": [
+      {
+        "Lugar": "🇳🇿 (Wellington)",
+        "CC": "-41.2824,174.7691",
+        "TZ": "Pacific/Auckland",
+        "src": "manual",
+        "zh": "+13:00"
+      },
+      {
+        "Lugar": "🇼🇸 (Apia)",
+        "CC": "-13.8313,-171.7664",
+        "TZ": "Pacific/Apia",
+        "src": "manual",
+        "zh": "+13:00"
+      }
+    ]
+  },
+  "GMT+12": {
+    "zh": "+12:00",
+    "lugares": [
+      {
+        "Lugar": "🇫🇯 (Suva)",
+        "CC": "-18.1465,178.4245",
+        "TZ": "Pacific/Fiji",
+        "src": "manual",
+        "zh": "+12:00"
+      },
+      {
+        "Lugar": "🇳🇫 (Kingston)",
+        "CC": "-29.0569,167.9593",
+        "TZ": "Pacific/Norfolk",
+        "src": "manual",
+        "zh": "+12:00"
+      }
+    ]
+  },
+  "GMT+11": {
+    "zh": "+11:00",
+    "lugares": [
+      {
+        "Lugar": "🇦🇺 (Sydney)",
+        "CC": "-33.8630,151.2153",
+        "TZ": "Australia/Sydney",
+        "src": "manual",
+        "zh": "+11:00"
+      }
+    ]
+  },
+  "GMT+10": {
+    "zh": "+10:00",
+    "lugares": [
+      {
+        "Lugar": "🇬🇺 (Tamuning)",
+        "CC": "13.5135,144.8057",
+        "TZ": "Pacific/Guam",
+        "src": "manual",
+        "zh": "+10:00"
+      }
+    ]
+  },
+  "GMT+9": {
+    "zh": "+09:00",
+    "lugares": [
+      {
+        "Lugar": "🇯🇵 (Tokio)",
+        "CC": "35.6892,139.6978",
+        "TZ": "Asia/Tokyo",
+        "src": "manual",
+        "zh": "+09:00"
+      },
+      {
+        "Lugar": "🇰🇷 (Busan)",
+        "CC": "35.1555,129.0591",
+        "TZ": "Asia/Seoul",
+        "src": "manual",
+        "zh": "+09:00"
+      }
+    ]
+  },
+  "GMT+8": {
+    "zh": "+08:00",
+    "lugares": [
+      {
+        "Lugar": "🇹🇼 (Taipéi)",
+        "CC": "25.0422,121.5067",
+        "TZ": "Asia/Taipei",
+        "src": "manual",
+        "zh": "+08:00"
+      },
+      {
+        "Lugar": "🇨🇳 (Hong Kong)",
+        "CC": "22.2777,114.1620",
+        "TZ": "Asia/Hong_Kong",
+        "src": "manual",
+        "zh": "+08:00"
+      }
+    ]
+  },
+  "GMT+7": {
+    "zh": "+07:00",
+    "lugares": [
+      {
+        "Lugar": "🇹🇭 (Bangkok)",
+        "CC": "13.7336,100.4970",
+        "TZ": "Asia/Bangkok",
+        "src": "manual",
+        "zh": "+07:00"
+      }
+    ]
+  },
+  "GMT+6": {
+    "zh": "+06:00",
+    "lugares": [
+      {
+        "Lugar": "🇧🇹 (Thimphu)",
+        "CC": "27.5004,89.6398",
+        "TZ": "Asia/Thimphu",
+        "src": "manual",
+        "zh": "+06:00"
+      }
+    ]
+  },
+  "GMT+5": {
+    "zh": "+05:00",
+    "lugares": [
+      {
+        "Lugar": "🇹🇲 (Ashgabat)",
+        "CC": "6.9129,79.8612",
+        "TZ": "Asia/Ashgabat",
+        "src": "manual",
+        "zh": "+05:00"
+      }
+    ]
+  },
+  "GMT+4": {
+    "zh": "+04:00",
+    "lugares": [
+      {
+        "Lugar": "🇦🇪 (Dubai)",
+        "CC": "25.0774,55.1336",
+        "TZ": "Asia/Dubai",
+        "src": "manual",
+        "zh": "+04:00"
+      },
+      {
+        "Lugar": "🇸🇨 (Victoria)",
+        "CC": "-4.6203,55.4526",
+        "TZ": "Indian/Mahe",
+        "src": "manual",
+        "zh": "+04:00"
+      }
+    ]
+  },
+  "GMT+3": {
+    "zh": "+03:00",
+    "lugares": [
+      {
+        "Lugar": "🇹🇷 (Izmir)",
+        "CC": "38.4634,27.2163",
+        "TZ": "Europe/Istanbul",
+        "src": "manual",
+        "zh": "+03:00"
+      }
+    ]
+  },
+  "GMT+2": {
+    "zh": "+02:00",
+    "lugares": [
+      {
+        "Lugar": "🇱🇧 (Beirut)",
+        "CC": "33.8937,35.4902",
+        "TZ": "Asia/Beirut",
+        "src": "manual",
+        "zh": "+02:00"
+      },
+      {
+        "Lugar": "🇬🇷 (Atenas)",
+        "CC": "37.9726,23.7372",
+        "TZ": "Europe/Athens",
+        "src": "manual",
+        "zh": "+02:00"
+      }
+    ]
+  },
+  "GMT+1": {
+    "zh": "+01:00",
+    "lugares": [
+      {
+        "Lugar": "🇪🇸 (Barcelona)",
+        "CC": "41.4043,2.1757",
+        "TZ": "Europe/Madrid",
+        "src": "manual",
+        "zh": "+01:00"
+      },
+      {
+        "Lugar": "🇭🇺 (Budapest)",
+        "CC": "47.5298,19.0515",
+        "TZ": "Europe/Budapest",
+        "src": "manual",
+        "zh": "+01:00"
+      },
+      {
+        "Lugar": "🇭🇷 (Zagreb)",
+        "CC": "45.8104,15.9782",
+        "TZ": "Europe/Zagreb",
+        "src": "manual",
+        "zh": "+01:00"
+      },
+      {
+        "Lugar": "🇲🇰 (Skopie)",
+        "CC": "42.0057,21.4212",
+        "TZ": "Europe/Skopje",
+        "src": "manual",
+        "zh": "+01:00"
+      }
+    ]
+  },
+  "GMT+0": {
+    "zh": "+00:00",
+    "lugares": [
+      {
+        "Lugar": "🇬🇧 (London)",
+        "CC": "51.5012,-0.1397",
+        "TZ": "Europe/London",
+        "src": "manual",
+        "zh": "+00:00"
+      },
+      {
+        "Lugar": "🇮🇨 (Las Palmas)",
+        "CC": "28.1287,-15.4516",
+        "TZ": "Atlantic/Canary",
+        "src": "manual",
+        "zh": "+00:00"
+      }
+    ]
+  },
+  "GMT-1": {
+    "zh": "-01:00",
+    "lugares": [
+      {
+        "Lugar": "🇨🇻 (Praia)",
+        "CC": "14.9184,-23.5085",
+        "TZ": "Atlantic/Cape_Verde",
+        "src": "manual",
+        "zh": "-01:00"
+      }
+    ]
+  },
+  "GMT-2": {
+    "zh": "-02:00",
+    "lugares": [
+      {
+        "Lugar": "🇬🇱 (Nuuk)",
+        "CC": "64.1741,-51.7385",
+        "TZ": "America/Godthab",
+        "src": "manual",
+        "zh": "-02:00"
+      }
+    ]
+  },
+  "GMT-3": {
+    "zh": "-03:00",
+    "lugares": [
+      {
+        "Lugar": "🇧🇷 (São Paulo)",
+        "CC": "-23.5842,-46.6594",
+        "TZ": "America/Sao_Paulo",
+        "src": "manual",
+        "zh": "-03:00"
+      },
+      {
+        "Lugar": "🇨🇱 (Santiago)",
+        "CC": "-33.4357,-70.6409",
+        "TZ": "America/Santiago",
+        "src": "manual",
+        "zh": "-03:00"
+      },
+      {
+        "Lugar": "🇦🇷 (Buenos Aires)",
+        "CC": "-34.6177,-58.4328",
+        "TZ": "America/Argentina/Buenos_Aires",
+        "src": "manual",
+        "zh": "-03:00"
+      }
+    ]
+  },
+  "GMT-4": {
+    "zh": "-04:00",
+    "lugares": [
+      {
+        "Lugar": "🇱🇨 (Castries)",
+        "CC": "14.0107,-60.9887",
+        "TZ": "America/St_Lucia",
+        "src": "manual",
+        "zh": "-04:00"
+      }
+    ]
+  },
+  "GMT-5": {
+    "zh": "-05:00",
+    "lugares": [
+      {
+        "Lugar": "🇺🇸 (NY)",
+        "CC": "40.7828,-73.9653",
+        "TZ": "America/New_York",
+        "src": "manual",
+        "zh": "-05:00"
+      },
+      {
+        "Lugar": "🇪🇨 (Quito)",
+        "CC": "-0.1838,-78.4846",
+        "TZ": "America/Guayaquil",
+        "src": "manual",
+        "zh": "-05:00"
+      },
+      {
+        "Lugar": "🇵🇪 (Lima)",
+        "CC": "-12.0627,-77.0362",
+        "TZ": "America/Lima",
+        "src": "manual",
+        "zh": "-05:00"
+      }
+    ]
+  },
+  "GMT-7": {
+    "zh": "-07:00",
+    "lugares": [
+      {
+        "Lugar": "🇺🇸 (Colorado)",
+        "CC": "39.7392,-104.9902",
+        "TZ": "America/Denver",
+        "src": "manual",
+        "zh": "-07:00"
+      },
+      {
+        "Lugar": "🇺🇸 (Nuevo Mexico)",
+        "CC": "35.0851,-106.6499",
+        "TZ": "America/Denver",
+        "src": "manual",
+        "zh": "-07:00"
+      },
+      {
+        "Lugar": "🇺🇸 (Denver)",
+        "CC": "39.7504,-104.9532",
+        "TZ": "America/Denver",
+        "src": "manual",
+        "zh": "-07:00"
+      }
+    ]
+  },
+  "GMT-8": {
+    "zh": "-08:00",
+    "lugares": [
+      {
+        "Lugar": "🇺🇸 (San Francisco)",
+        "CC": "37.8086,-122.4098",
+        "TZ": "America/Los_Angeles",
+        "src": "manual",
+        "zh": "-08:00"
+      }
+    ]
+  },
+  "GMT-9": {
+    "zh": "-09:00",
+    "lugares": [
+      {
+        "Lugar": "🇺🇸 (Downtown Anchorage)",
+        "CC": "61.2167,-149.8923",
+        "TZ": "America/Anchorage",
+        "src": "manual",
+        "zh": "-09:00"
+      }
+    ]
+  },
+  "GMT-10": {
+    "zh": "-10:00",
+    "lugares": [
+      {
+        "Lugar": "🇺🇸 (Honolulu)",
+        "CC": "21.2709,-157.8181",
+        "TZ": "Pacific/Honolulu",
+        "src": "manual",
+        "zh": "-10:00"
+      }
+    ]
+  },
+  "GMT-11": {
+    "zh": "-11:00",
+    "lugares": [
+      {
+        "Lugar": "🇦🇸 (Pago Pago)",
+        "CC": "-14.2779,-170.6882",
+        "TZ": "Pacific/Pago_Pago",
+        "src": "manual",
+        "zh": "-11:00"
+      }
+    ]
+  }
+}
